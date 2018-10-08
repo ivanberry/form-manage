@@ -1,0 +1,18 @@
+.basic-layout {
+  display: flex;
+  text-align: center;
+  height: 100%;
+
+  .basic-layout__header {
+    width: 30%;
+  }
+
+  .basic-layout__side {
+    width: 30%;
+  }
+}
+
+.layout-item {
+  flex: 1;
+}
+
