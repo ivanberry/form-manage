@@ -10,6 +10,14 @@
   .basic-layout__side {
     width: 30%;
   }
+
+  .basic-components {
+    border: 1px solid red;
+  }
+
+  .basic-components__config {
+    border: 1px solid green;
+  }
 }
 
 .layout-item {

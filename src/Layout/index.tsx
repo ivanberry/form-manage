@@ -1,19 +1,26 @@
 import Layout from "antd/lib/layout/layout";
 import * as React from "react";
-import * as formItems from "../Forms";
+import Draggable from "react-draggable";
+import { default as formItems } from "../Forms";
 import "./index.scss";
 
 const { Content } = Layout;
 
 export default () => {
-  let counter = 0;
   return (
     <Layout className="basic-layout">
-      <div>
-        {Object.values(formItems).map((Item: any) => <Item key={counter++} />)}
+      <div className="basic-components">
+        {formItems.map(({ name, Component }) => (
+          <Draggable cancel=".not-draggable">
+            <div key={name}>
+              <h1>{name}</h1>
+              <Component className="not-draggable"  />
+            </div>
+          </Draggable>
+        ))}
       </div>
       <Content className="layout-item">zzzz</Content>
-      <div>
+      <div className="basic-components__config">
         <h1>yyy</h1>
       </div>
     </Layout>
